@@ -92,7 +92,7 @@ Returns an array of *Ticket* object that contains the information of the ticket.
 ## Screenshots
 
 ### Program Screenshot
-![Program](screenshots/ouput1.PNG)
+![Program](screenshots/Output1.PNG)
 
 ### JSON Example
 ![JSON](screenshots/hasil_json.PNG)
