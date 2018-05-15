@@ -1,19 +1,12 @@
-<h1 align="center">
-  <br>
-  Tugas 1 Seleksi Warga Basdat 2018
-  <br>
-  <br>
-</h1>
+<h1 align="center">TrainTicketCrawler</h1>
 
-<h2 align="center">
-  <br>
-  Data Scraping
-  <br>
-  <br>
-</h2>
+## Description
 
+A web scrapper that scraps train tickets data from [**tiket.com**](https://www.tiket.com/kereta-api). The scrapped data contains the data of the ticket. Returns the **JSON** object of the parsed data from the website. 
 
-### Specifications
+See JSON Structure for further details.
+
+## Specification
 
 1. Lakukan data scraping dari sebuah laman web untuk memeroleh data atau informasi tertentu __TANPA MENGGUNAKAN API__
 
@@ -68,16 +61,44 @@ Preprocessing contohnya :
 - Author
 ```
 
-<h1 align="center">
-  <br>
-  Selamat BerEksplorasi!
-  <br>
-  <br>
-</h1>
 
-<p align="center">
-  <br>
-  Basdat Industries - Lab Basdat 2018
-  <br>
-  <br>
-</p>
+## How to use
+```
+To compile the program:
+```
+To run the program:
+```
+$ make run
+```
+
+
+
+## JSON Structure
+Returns an array of *Ticket* object that contains the information of the ticket.
+
+```
+[
+  {"departure": "GMR", "arrival": "BD", "date": "0505", "type_train": "eko", "adult": "80000", "infant": "12840"}, 
+  {"departure": "GMR", "arrival": "BD", "date": "0615", "type_train": "eks", "adult": "120000", "infant": "13140"}, 
+]
+```
+
+
+
+## Screenshots
+
+### Program Screenshot
+![Program](screenshots/kai1.png)
+
+### JSON Example
+![JSON](screenshots/hasil_json.png)
+
+
+## Reference
+[Beautiful Soup Python](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
+
+
+## Author
+
+<h3> Timothy Thamrin Andrew H. Sihombing </h3>
+<h3> 13516090 </h3>
