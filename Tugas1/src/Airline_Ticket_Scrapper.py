@@ -23,8 +23,7 @@ def generate_url(range_date, dep_city, arr_city):
     
     for city in arr_city:
         for date in range_date:
-            url = 'https://www.tiket.com/pesawat/cari?d=' + dep_city + '&a=' + city + '&date=' 
-            url += date + '&adult=1&child=0&infant=0'
+            url = 'https://www.tiket.com/pesawat/cari?d=' + dep_city + '&a=' + city + '&date=' + date + '&adult=1&child=0&infant=0'
             urls.append(url)
     
     return urls
@@ -57,20 +56,23 @@ def get_flight_infos(url):
 def print_flight_infos(flight_infos):
     for data in flight_infos:
         print(data)
+def main():
+	dep_city = 'CGK'
+	arr_city = ['DPS', 'BDO']
+	range_date = ['2018-05-16','2018-05-17','2018-05-18']
+	flight_infos_all = []
 
-dep_city = 'CGK'
-arr_city = ['DPS', 'BDO']
-range_date = ['2018-05-16','2018-05-17','2018-05-18']
-flight_infos_all = []
+	urls = generate_url(range_date, dep_city, arr_city)
+	for url in urls:
+	    print(url)
+	    flight_infos_all.append(get_flight_infos(url))
+	    print_flight_infos(get_flight_infos(url))
+	    print()
+	    print()
+	    
+	result = make_dict(flight_infos_all)
+	with open('data.json', 'w') as outfile:
+	    json.dump(result, outfile)
 
-urls = generate_url(range_date, dep_city, arr_city)
-for url in urls:
-    print(url)
-    flight_infos_all.append(get_flight_infos(url))
-    print_flight_infos(get_flight_infos(url))
-    print()
-    print()
-    
-result = make_dict(flight_infos_all)
-with open('data.json', 'w') as outfile:
-    json.dump(result, outfile)
+if __name__ == "__main__":
+	main() 	

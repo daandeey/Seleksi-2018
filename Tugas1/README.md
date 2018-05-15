@@ -1,8 +1,8 @@
-<h1 align="center">TrainTicketCrawler</h1>
+<h1 align="center">Airline Ticket Crawler</h1>
 
 ## Description
 
-A web scrapper that scraps train tickets data from [**tiket.com**](https://www.tiket.com/kereta-api). The scrapped data contains the data of the ticket. Returns the **JSON** object of the parsed data from the website. 
+Airline Ticket Crawler is a web scrapper that scrap data from [**tiket.com**](https://www.tiket.com/pesawat). The data contains the flight number, airline, price, departure city, departure time, arrival city, and arrival time. This crawler returns the data in **JSON**
 
 See JSON Structure for further details.
 
@@ -63,12 +63,14 @@ Preprocessing contohnya :
 
 
 ## How to use
-```
+
 To compile the program:
+```
+python Airline_Ticket_Scrapper.py
 ```
 To run the program:
 ```
-$ make run
+$ make
 ```
 
 
@@ -78,9 +80,11 @@ Returns an array of *Ticket* object that contains the information of the ticket.
 
 ```
 [
-  {"departure": "GMR", "arrival": "BD", "date": "0505", "type_train": "eko", "adult": "80000", "infant": "12840"}, 
-  {"departure": "GMR", "arrival": "BD", "date": "0615", "type_train": "eks", "adult": "120000", "infant": "13140"}, 
+  {"flight_id": "SJ-272", "airlines": "SRIWIJAYA", "price": "580600", "dep_city": "Jakarta (CGK)", "dep_time": "06:15", "arr_city": "Denpasar (DPS), "arr_time": "09:05"},
+  {"flight_id": "SJ-260", "airlines": "SRIWIJAYA", "price": "575600", "dep_city": "Jakarta (CGK)", "dep_time": "17:20", "arr_city": "Denpasar (DPS)", "arr_time": "20:10"},
+  ...
 ]
+
 ```
 
 
@@ -88,17 +92,18 @@ Returns an array of *Ticket* object that contains the information of the ticket.
 ## Screenshots
 
 ### Program Screenshot
-![Program](screenshots/kai1.png)
+![Program](screenshots/ouput1.PNG)
 
 ### JSON Example
-![JSON](screenshots/hasil_json.png)
+![JSON](screenshots/hasil_json.PNG)
 
 
 ## Reference
 [Beautiful Soup Python](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
 
 
+
 ## Author
 
-<h3> Timothy Thamrin Andrew H. Sihombing </h3>
-<h3> 13516090 </h3>
+<h3> Dandy Arif Rahman</h3>
+<h3> 13516086 </h3>
